@@ -16,39 +16,28 @@ public class User {
         return nomeCliente;
     }
 
-    public void setNomeCliente(String nomeCliente) {
-        this.nomeCliente = nomeCliente;
-    }
-
     public Integer getNumeroConta() {
         return numeroConta;
-    }
-
-    public void setNumeroConta(Integer numeroConta) {
-        this.numeroConta = numeroConta;
     }
 
     public String getAgencia() {
         return agencia;
     }
 
-    public void setAgencia(String agencia) {
-        this.agencia = agencia;
-    }
-
     public double getSaldo() {
         return saldo;
     }
 
-    public void pagar(int valor){
+    public void pagar(double valor){
         if ((saldo - valor) <= 0){
             System.out.println("Saldo Insuficiente");
         } else {
             this.saldo = this.saldo - valor;
-            System.out.println("Novo saldo ="+this.saldo);
+            System.out.println("Novo saldo = "+this.saldo);
         }
     }
-    public void receba(int valor){
+    public void receba(double valor){
         this.saldo = this.saldo+valor;
+        System.out.println("Novo saldo = "+ this.saldo);
     }
 }
